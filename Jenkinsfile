@@ -18,12 +18,4 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                script {
-                    // Add deployment steps here if needed
-                }
-            }
-        }
-    
 }

@@ -16,6 +16,16 @@ pipeline {
                 }
                 }
             }
+
+         stage('Deploy') {
+            steps {
+                script {
+                    sh """
+                        docker run -tdp 9000:80 ahmedashraf15/backehouse:V"${BUILD_NUMBER}"
+                    """
+                }
+                }
+            }
         }
 
 }

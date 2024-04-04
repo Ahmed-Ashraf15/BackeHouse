@@ -4,20 +4,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
-                git branch: 'main', url:'https://github.com/Ahmed-Ashraf15/BackeHouse.git'
 
-                // run docker file and push image to docker hub
-                sh 'ls'
+                docker login -u ${Docker_ID} -p ${Docker_Pass}
+                docker build -t Bakehouse:v5 .
+                docker tag Bakehouse:v5 ahmedashraf15/BackeHouse:v1
+                docker push ahmedashraf15/BackeHouse:v1
 
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'echo hello'
+                
             }
         }
     }

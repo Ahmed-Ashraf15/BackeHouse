@@ -1,0 +1,16 @@
+- name: jenkins_slave
+  hosts: 54.91.82.235
+  remote_user: ubuntu
+  gather_facts: false
+
+  tasks:
+    - name: make root dir
+      file:
+        path: /home/ubuntu/jenkins_home
+        state: directory
+        mode: 0777
+
+    - name: install JDK
+      apt:
+        update_cache: yes
+        name: openjdk-11-jdk

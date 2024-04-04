@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                 script {
 
                 docker login -u "${Docker_ID}" -p "${Docker_Pass}"
                 docker build -t Bakehouse:v5 .
@@ -11,11 +12,13 @@ pipeline {
                 docker push ahmedashraf15/BackeHouse:v1
 
             }
+            }
         }
 
         stage('Deploy') {
             steps {
-                
+                  script {
+                  }
             }
         }
     }

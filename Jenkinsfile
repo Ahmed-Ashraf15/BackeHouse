@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/Ahmed-Ashraf15/BackeHouse.git'
+                git branch: 'main', url:'https://github.com/Ahmed-Ashraf15/BackeHouse.git'
 
                 // run docker file and push image to docker hub
                 sh 'ls'

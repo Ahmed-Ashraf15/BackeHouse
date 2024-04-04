@@ -14,6 +14,7 @@ pipeline {
                         docker push ahmedashraf15/BackeHouse:v1
                     """
                 }
+                }
             }
         }
 

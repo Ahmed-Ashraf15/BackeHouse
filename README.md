@@ -12,7 +12,7 @@ This is a frontend application that is containerized using Docker and integrated
 ## Details
 
 1. project using Jenkins pipeline
-   - consist from two stages
+   . consist from two stages CI/CD
 2. CI stage run docker file to build the image and push it to docker hub repository
 3. CD stage pull the image from docker hub then run container with host port 9000
 

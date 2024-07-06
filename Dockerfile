@@ -5,3 +5,4 @@ COPY . /usr/share/nginx/html
 
 FROM nginx:alpine
 COPY --from=main /usr/share/nginx/html /usr/share/nginx/html
+EXPOSE 80

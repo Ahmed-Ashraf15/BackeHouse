@@ -6,4 +6,5 @@ Welcome to the DevOps Frontend Project! This is a frontend application that is c
 
 ## About
 
-<img src="images/live_project.png" alt="live" width="80" height="80">
+![Screenshot](images/live_project.png)
+

@@ -10,8 +10,8 @@ pipeline {
                     sh """
                         docker login -u "${Docker_ID}" -p "${Docker_Pass}"
                         docker build -t bakehouse:v5 .
-                        docker tag bakehouse:v5 ahmedashraf15/backehouse:V"${BUILD_NUMBER}"
-                        docker push ahmedashraf15/backehouse:V"${BUILD_NUMBER}"
+                        docker tag bakehouse:v5 ahmedashraf15/backehouse:v"${BUILD_NUMBER}"
+                        docker push ahmedashraf15/backehouse:v"${BUILD_NUMBER}"
                     """
                 }
                 }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        docker run -tdp 9000:80 ahmedashraf15/backehouse:V"${BUILD_NUMBER}"
+                        docker run -tdp 9000:80 ahmedashraf15/backehouse:v"${BUILD_NUMBER}"
                     """
                 }
                 }

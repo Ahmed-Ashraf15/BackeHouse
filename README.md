@@ -24,7 +24,7 @@ docker pull ahmedashraf15/backehouse:v1
 ```
 - run container from downloaded image
 ```
-docker run -tdp 9000:80 ahmedashraf15/backehouse:v1
+docker run -dp 9000:80 ahmedashraf15/backehouse:v1
 ```
 > [!NOTE]
 > Version and host port are changeable
